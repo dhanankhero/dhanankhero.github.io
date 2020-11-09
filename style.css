@@ -1,0 +1,90 @@
+body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1ee;
+}
+
+a {color: inherit;text-decoration: none;}
+
+:focus {outline: none;}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    cursor: pointer;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+* {box-sizing: border-box;}
+
+.dh-tool-head {padding: 10px;text-align: center;margin: 45px 0 85px}
+.dh-tool-head h1 {text-transform: uppercase;font-weight: 500;letter-spacing: 5px;}
+
+.dh-content-wrapper {padding: 10px;margin: 15px 0;border-radius: 15px;background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;}
+.dh-content-wrapper img {width: 100%;border-radius: 10px;}
+.dh-content-wrapper h3 {margin: 20px 0 10px;font-size: 32px;font-family: 'Rubik', sans-serif;font-weight: 500;text-transform: uppercase;letter-spacing: 1px;}
+.dh-content-wrapper p {margin: 10px 0;font-size: 14px;color: #aaa;font-weight: 300;}
+.dh-content-wrapper .dh-button {margin: 8px 0;font-size: 12px;background-color: #fcfcfc;border: 1px solid #eee;border-radius: 5px;box-shadow: 0 5px 10px #00000007,0 -2px 2px #00000010 inset;padding: 10px 20px;cursor: pointer;letter-spacing: 1px;font-weight: 600;}
+.dh-content-wrapper .dh-button:hover {background-color: #fff;}
+
+.dh-garis {border: 0;border-top: 1px solid #e9e9e9;margin: 40px 0;}
+.dh-credit {padding: 0 0 30px;text-align: center;}
+
+.dh-box-max {padding: 10px;width: 100%;height: 450px;resize: none;background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border: 0;border-radius: 10px;}
+.dh-box-max-dua {padding: 10px;width: 100%;height: 350px;resize: none;background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border: 0;border-radius: 10px;margin: 15px 0 0;}
+.dh-box-max-tiga {padding: 10px;width: 100%;height: 350px;resize: none;background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border: 0;border-radius: 10px;margin: 15px 0 5px;}
+.dh-wrapper-ending {padding: 0;overflow: hidden;}
+.dh-textarea-max {width: calc(100% - 20px);height: calc(100% - 20px);background-color: #0000;border: 0;margin: 10px;resize: none;}
+.metode {height: 30px;margin: 10px 0;}
+
+.dh-icon-padding {padding: 15px;}
+
+.kunch {height: 350px !important;}
+.tombol {font-size: 13px;padding: 10px 0;border: 0;background-color: #51676f;margin-top: 15px;width: 100%;border-radius: 10px;color: #fff;cursor: pointer;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;letter-spacing: 1px;}
+.copy {background-color: #fff0;color: #555;box-shadow: none;}
+.dh-opsi {text-align: right;}
+
+.title-page {margin: 20px 0;}
+.title-page h1 {font-size: 34px;font-weight: 500;color: #51676f;}
+.dh-site-tittle {margin: 50px -15px;}
+
+.dh-opt {width: 100%;margin: 15px 0;padding: 10px ;font-size: 13px;border: 0;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border-radius: 10px;}
+
+.dh-navbar {background-color: #fffa;position: sticky;top: 0px;z-index: 99;padding: 10px 0;margin-bottom: 15px;backdrop-filter: blur(10px);-moz-backdrop-filter: blur(10px);}
+.dh-navbar img {width: 150px;}
+
+.dh-hormenu {list-style: none;margin: 0;text-align: right;}
+.dh-hormenu li {display: inline-block;margin: 0;padding: 11px 15px;}
+
+.dh-other-tools a {background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border: 0;border-radius: 10px;padding: 15px 30px;display: inline-block;margin-top: 15px;text-decoration: none !important;}
+
+.dh-article-box h4 {font-weight: 500;margin: 2em 0 0;font-size: 18px;}
+.dh-article-box h6 {font-weight: 500;margin: 2em 0 0;font-size: 18px;}
+.dh-article-box p {line-height: 1.5em;margin: 0.5em 0 .75em;color: #555;}
+.dh-article-box ul {margin: 0;padding: 14px 14px 14px 34px;}
+.dh-article-box li {padding: 4px;font-size: 14px;color: #555;}
+.dh-article-box a {color: #095c7a;text-decoration: underline;}
+.dh-recommendation {font-style: italic;font-size: 13px;margin-bottom: 20px;display: inline-block}
+.dh-article-box a.dh-article-button {display: inline-block;background-color: #51676f;color: #fff !important;text-decoration: none;padding: 10px 30px;border-radius: 10px;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff}
+.dh-box-preview {background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border: 0;border-radius: 10px;}
+.dh-box-preview h6 {font-size: 12px;font-weight: 500;margin: 0;padding: 15px;border-bottom: 1px solid #eee;letter-spacing: 1px;}
+.dh-box-preview ul {margin: 0;padding: 14px 14px 14px 34px;}
+.dh-box-preview li {padding: 4px;font-size: 13px;color: #777;}
+.dh-box-preview p {padding: 5px 15px 15px;}
+
