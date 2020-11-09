@@ -1,0 +1,252 @@
+'use strict';
+/** @type {!Array} */
+var _0x8bae = ["chrome", "indexOf", "toLowerCase", "userAgent", "selectionStart", "selection", "focus", "createRange", "createTextRange", "duplicate", "getBookmark", "moveToBookmark", "EndToStart", "setEndPoint", " ", "replace", "text", "\r\n", "\n", "\r", "length", "setSelectionRange", "collapse", "character", "moveEnd", "moveStart", "select", "val", "input[name='syntax']:checked", "getElementById", "0", "selectionEnd", "substring", "value", "Your browser does not support this function.", "trim", 
+"charAt", "", "$xxxxx$", "appName", "Microsoft Internet Explorer", "split", "substr", "width", "left=", ",top=", "free.spin.editor.php", "AssistedSpinEditor", "resizable=yes,width=1000,height=450,", "open", "blur", "parent", "[", "]", "=====!!! Spin Error Detected !!!=================\nCheck the Spin Editor in Manual Spin mode for easy editing. The error may be highlighted in yellow or somewhere near.\n\nYour can also check the spun text below for any redundant or missing brackets. The text below is generated up to the point when error is detected.\n======================================\n\n", 
+"|", "random", "floor", "=====!!! Spin Error Detected !!!=================\nThere is a missing close bracket (or redundant open bracket) in the article.\n\nYour can check the spun text below for any redundant or missing brackets. The text below is generated up to the point when error is detected.\n======================================\n\n", "=====!!! Spin Error Detected !!!=================\nThere is an extra close bracket (or missing open bracket) in the article.\n\nYour can check the spun text below for any redundant or missing brackets. The text below is generated up to the point when error is detected.\n======================================\n\n", 
+"&lt;", "&gt;", "<br />", "<span style='background-color: #ffffff'>1st</span>", "<span style='background-color: #ffffff'>|</span>", "<span style='background-color: #ffffff'>,</span>", "<span style='background-color: #ffffff'>?</span>", "<span style='background-color: #ffffff'>!</span>", "<span style='background-color: #ffffff'>.</span>", ". <span style='background-color: #ffffff'>$1</span>", " a <span style='background-color: #ffffff'>$1</span>", "A <span style='background-color: #ffffff'>$1</span>", 
+" an <span style='background-color: #ffffff'>$1</span>", "An <span style='background-color: #ffffff'>$1</span>", "#ffffff", "<b><font color='#FF0000'>&gt;&gt; ", " Potential Error Found <small>(More potential errors may be highlighted in the colored viewing panel above.)</small></font></b><br /><br />", " Potential Errors Found <small>(More potential errors may be highlighted in the colored viewing panel above.)</small></font></b><br /><br />", "innerHTML", "sq", "cl", "{", "}"];
+/** @type {boolean} */
+var is_chrome = navigator[_0x8bae[3]][_0x8bae[2]]()[_0x8bae[1]](_0x8bae[0]) > -1;
+/**
+ * @param {?} oField
+ * @return {?}
+ */
+function doGetCaretPosition(oField) {
+  if (oField[_0x8bae[4]]) {
+    return oField[_0x8bae[4]];
+  } else {
+    if (document[_0x8bae[5]]) {
+      oField[_0x8bae[6]]();
+      var r = document[_0x8bae[5]][_0x8bae[7]]();
+      if (r == null) {
+        return 0;
+      }
+      var relationName = oField[_0x8bae[8]]();
+      var _related2 = relationName[_0x8bae[9]]();
+      relationName[_0x8bae[11]](r[_0x8bae[10]]());
+      _related2[_0x8bae[13]](_0x8bae[12], relationName);
+      var rc1 = _related2[_0x8bae[16]][_0x8bae[15]](/(\r\n|\n|\r)/gm, _0x8bae[14]);
+      for (; rc1[_0x8bae[1]](_0x8bae[17]) > 0 || rc1[_0x8bae[1]](_0x8bae[18]) > 0 || rc1[_0x8bae[1]](_0x8bae[19]) > 0;) {
+        rc1 = rc1[_0x8bae[15]](/(\r\n|\n|\r)/gm, _0x8bae[14]);
+      }
+      return rc1[_0x8bae[20]];
+    }
+  }
+  return 0;
+}
+/**
+ * @param {?} el
+ * @param {?} option
+ * @return {undefined}
+ */
+function setCaretPosition(el, option) {
+  if (el[_0x8bae[21]]) {
+    el[_0x8bae[6]]();
+    el[_0x8bae[21]](option, option);
+  } else {
+    if (el[_0x8bae[8]]) {
+      var StmtGen = el[_0x8bae[8]]();
+      StmtGen[_0x8bae[22]](true);
+      StmtGen[_0x8bae[24]](_0x8bae[23], option);
+      StmtGen[_0x8bae[25]](_0x8bae[23], option);
+      StmtGen[_0x8bae[26]]();
+    }
+  }
+}
+var syntaxcode;
+var thenumber;
+var fullstr;
+var writedataon;
+var assistedwin;
+/**
+ * @param {number} name
+ * @return {?}
+ */
+function assistedspinthis(name) {
+  /** @type {boolean} */
+  var changeTitleCase = false;
+  syntaxcode = $(_0x8bae[28])[_0x8bae[27]]();
+  /** @type {number} */
+  thenumber = name;
+  var cache = document[_0x8bae[29]](name);
+  if (document[_0x8bae[5]]) {
+    sel = document[_0x8bae[5]][_0x8bae[7]]()[_0x8bae[16]];
+  } else {
+    if (cache[_0x8bae[4]] || cache[_0x8bae[4]] == _0x8bae[30]) {
+      var data = cache[_0x8bae[4]];
+      var svg = cache[_0x8bae[31]];
+      sel = cache[_0x8bae[33]][_0x8bae[32]](data, svg);
+    } else {
+      alert(_0x8bae[34]);
+      return false;
+    }
+  }
+  sel = jQuery[_0x8bae[35]](sel);
+  var listItem = sel[_0x8bae[20]];
+  if (sel && listItem > 0 && listItem < 50) {
+    var groupNamePrefix = sel[_0x8bae[36]](0);
+    var dupeNameCount = sel[_0x8bae[36]](listItem - 1);
+    if (groupNamePrefix != _0x8bae[14]) {
+      groupNamePrefix = _0x8bae[37];
+    }
+    if (dupeNameCount != _0x8bae[14]) {
+      dupeNameCount = _0x8bae[37];
+    }
+    strholder = groupNamePrefix + _0x8bae[38] + dupeNameCount;
+    cursorPos = doGetCaretPosition(document[_0x8bae[29]](name));
+    var dom_implemented = navigator[_0x8bae[39]];
+    if (dom_implemented == _0x8bae[40]) {
+      cursorPosB = cache[_0x8bae[33]][_0x8bae[32]](0, cursorPos)[_0x8bae[41]](/\n/g)[_0x8bae[20]] - 1 + cursorPos;
+    } else {
+      cursorPosB = cursorPos;
+    }
+    snapleft = cache[_0x8bae[33]][_0x8bae[32]](0, cursorPosB);
+    snapright = cache[_0x8bae[33]][_0x8bae[42]](cursorPosB);
+    snapright = snapright[_0x8bae[15]](sel, strholder);
+    fullstr = snapleft + snapright;
+  } else {
+    sel = _0x8bae[37];
+    fullstr = cache[_0x8bae[33]];
+  }
+  /** @type {boolean} */
+  writedataon = true;
+  /** @type {number} */
+  var doPopUpX = screen[_0x8bae[43]] / 2 - 500;
+  /** @type {number} */
+  var modifier = 0;
+  var ne = _0x8bae[44] + doPopUpX + _0x8bae[45] + modifier;
+  assistedwin = window[_0x8bae[49]](_0x8bae[46], _0x8bae[47], _0x8bae[48] + ne);
+  if (navigator[_0x8bae[39]] != _0x8bae[40]) {
+    window[_0x8bae[50]]();
+  }
+  if (is_chrome) {
+    assistedwin[_0x8bae[51]][_0x8bae[50]]();
+  }
+  assistedwin[_0x8bae[6]]();
+  return false;
+}
+/**
+ * @param {?} str
+ * @return {?}
+ */
+function spin(str) {
+  str = str[_0x8bae[15]](/{/g, _0x8bae[52]);
+  str = str[_0x8bae[15]](/}/g, _0x8bae[53]);
+  for (; str[_0x8bae[1]](_0x8bae[52]) >= 0 && str[_0x8bae[1]](_0x8bae[53]) >= 0;) {
+    if (str[_0x8bae[1]](_0x8bae[52]) > str[_0x8bae[1]](_0x8bae[53])) {
+      return _0x8bae[54] + str;
+    }
+    var Y = str[_0x8bae[1]](_0x8bae[52]);
+    var x = str[_0x8bae[1]](_0x8bae[53]);
+    var text2 = str[_0x8bae[42]](Y + 1, x - Y - 1);
+    if (text2[_0x8bae[1]](_0x8bae[52]) >= 0) {
+      /** @type {number} */
+      var level2 = 1;
+      var Y = str[_0x8bae[1]](_0x8bae[52], str[_0x8bae[1]](_0x8bae[52]) + 1);
+      var X = x;
+      if (str[_0x8bae[42]](Y + 1, X - Y - 1)[_0x8bae[1]](_0x8bae[52]) >= 0 || str[_0x8bae[42]](Y + 1, X - Y - 1)[_0x8bae[1]](_0x8bae[53]) >= 0) {
+        return _0x8bae[54] + str;
+      }
+      var nextIdLookup = str[_0x8bae[42]](Y + 1, X - Y - 1)[_0x8bae[41]](_0x8bae[55]);
+      if (nextIdLookup[_0x8bae[20]] > 1) {
+        var indexLookupKey = Math[_0x8bae[57]](Math[_0x8bae[56]]() * nextIdLookup[_0x8bae[20]]);
+      } else {
+        /** @type {number} */
+        indexLookupKey = 0;
+      }
+      var currentIndex = nextIdLookup[indexLookupKey];
+      var YY = str[_0x8bae[42]](Y, X - Y + 1);
+      str = str[_0x8bae[15]](YY, currentIndex);
+    } else {
+      if (str[_0x8bae[42]](Y + 1, x - Y - 1)[_0x8bae[1]](_0x8bae[52]) >= 0 || str[_0x8bae[42]](Y + 1, x - Y - 1)[_0x8bae[1]](_0x8bae[53]) >= 0) {
+        return _0x8bae[54] + str;
+      }
+      var nextIdLookup = str[_0x8bae[42]](Y + 1, x - Y - 1)[_0x8bae[41]](_0x8bae[55]);
+      if (level2 == 1) {
+        indexLookupKey = Math[_0x8bae[57]](Math[_0x8bae[56]]() * nextIdLookup[_0x8bae[20]]);
+      } else {
+        if (nextIdLookup[_0x8bae[20]] > 1) {
+          indexLookupKey = Math[_0x8bae[57]](Math[_0x8bae[56]]() * nextIdLookup[_0x8bae[20]]);
+        } else {
+          /** @type {number} */
+          indexLookupKey = 0;
+        }
+      }
+      var currentIndex = nextIdLookup[indexLookupKey];
+      var YY = str[_0x8bae[42]](Y, x - Y + 1);
+      str = str[_0x8bae[15]](YY, currentIndex);
+      /** @type {number} */
+      level2 = 0;
+    }
+  }
+  str = str[_0x8bae[15]](/   /g, _0x8bae[14]);
+  str = str[_0x8bae[15]](/  /g, _0x8bae[14]);
+  if (str[_0x8bae[1]](_0x8bae[52]) >= 0) {
+    return _0x8bae[58] + str;
+  }
+  if (str[_0x8bae[1]](_0x8bae[53]) >= 0) {
+    return _0x8bae[59] + str;
+  }
+  return str;
+}
+/**
+ * @param {?} key
+ * @return {undefined}
+ */
+function realspunpreview(key) {
+  var result = document[_0x8bae[29]](8)[_0x8bae[33]];
+  result = spin(result);
+  result = result[_0x8bae[15]](/</g, _0x8bae[60]);
+  result = result[_0x8bae[15]](/>/g, _0x8bae[61]);
+  var result_html_id = result;
+  var text = result_html_id[_0x8bae[15]](/(\r\n|\n|\r)/gm, _0x8bae[62]);
+  text = text[_0x8bae[15]](/1st/g, _0x8bae[63]);
+  text = text[_0x8bae[15]](/\|/g, _0x8bae[64]);
+  text = text[_0x8bae[15]](/,(?=[a-zA-Z0-9~])/g, _0x8bae[65]);
+  text = text[_0x8bae[15]](/\?(?=[a-zA-Z0-9~])/g, _0x8bae[66]);
+  text = text[_0x8bae[15]](/!(?=[a-zA-Z0-9~])/g, _0x8bae[67]);
+  text = text[_0x8bae[15]](/\.(?=[a-zA-Z0-9~])/g, _0x8bae[68]);
+  text = text[_0x8bae[15]](/\?(?=[a-z])/g, _0x8bae[66]);
+  text = text[_0x8bae[15]](/\. ([a-z])/g, _0x8bae[69]);
+  text = text[_0x8bae[15]](/ a ([a|e|i|o|u])/g, _0x8bae[70]);
+  text = text[_0x8bae[15]](/A ([a|e|i|o|u])/g, _0x8bae[71]);
+  text = text[_0x8bae[15]](/ an ([q|w|r|t|y|p|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m])/g, _0x8bae[72]);
+  text = text[_0x8bae[15]](/An ([q|w|r|t|y|p|s|d|f|g|h|j|k|l|z|x|c|v|b|n|m])/g, _0x8bae[73]);
+  /** @type {number} */
+  var errorCount = text[_0x8bae[41]](_0x8bae[74])[_0x8bae[20]] - 1;
+  if (errorCount > 0 && errorCount == 1) {
+    var href = _0x8bae[75] + errorCount + _0x8bae[76] + text;
+  } else {
+    if (errorCount > 0) {
+      href = _0x8bae[75] + errorCount + _0x8bae[77] + text;
+    } else {
+      href = text;
+    }
+  }
+  var data = document[_0x8bae[29]](key);
+  data[_0x8bae[78]] = href;
+
+  // var textContent = document.getElementById('preview-spun').value;
+  var tmp = document.createElement('textarea');
+tmp.innerHTML = text;
+    document.getElementById('viewer').srcdoc = tmp.value;
+
+}
+/**
+ * @param {?} type
+ * @return {undefined}
+ */
+function fixSyn(type) {
+  var NewText = document[_0x8bae[29]](8)[_0x8bae[33]];
+  if (type == _0x8bae[79]) {
+    NewText = NewText[_0x8bae[15]](/{/g, _0x8bae[52]);
+    NewText = NewText[_0x8bae[15]](/}/g, _0x8bae[53]);
+  } else {
+    if (type == _0x8bae[80]) {
+      NewText = NewText[_0x8bae[15]](/\[/g, _0x8bae[81]);
+      NewText = NewText[_0x8bae[15]](/\]/g, _0x8bae[82]);
+    }
+  }
+  document[_0x8bae[29]](8)[_0x8bae[33]] = NewText;
+    
+}

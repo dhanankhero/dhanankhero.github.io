@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0029)http://seo.danzambonini.com/# -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<head>
+
+	<meta http-equiv="Content-Style-Type" content="text/css"> 
+	<title>Keyword Builder - Dhununk</title>
+	<link rel="stylesheet" href="../bootstrap-grid.min.css">
+    <link rel="icon" href="../img/favicon.png">
+	<link rel="stylesheet" href="../style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<script language="javascript" type="text/javascript">
+		function generate() {
+			var kw1     = document.getElementById('kw1').value.replace(/^\s*/, '').replace(/\s*$/, '').split("\n");
+			var kw2     = document.getElementById('kw2').value.replace(/^\s*/, '').replace(/\s*$/, '').split("\n");
+			var kw3     = document.getElementById('kw3').value.replace(/^\s*/, '').replace(/\s*$/, '').split("\n");
+			var results = '';
+			var openq   = '';
+			var closeq  = '';
+
+			var msel  = document.getElementById("matchtype");
+			var mtype = msel.options[msel.selectedIndex].value;    
+
+			if (mtype == 'quotes') {
+				openq  = '"';
+				closeq = '"';
+			} else if (mtype == 'square') {
+				openq  = '[';
+				closeq = ']';
+			}
+
+			for (x in kw1) {
+				for (y in kw2) {
+					if (document.getElementById('kw3').value) {
+						for (z in kw3) {
+							results += openq + kw1[x] + " " + kw2[y] + " " + kw3[z] + closeq + "\n";
+						}
+					} else {
+						results += openq + kw1[x] + " " + kw2[y] + closeq + "\n";
+					}
+				}
+
+			// results += openq + kw1[x] + closeq + "\n";
+			}
+
+			document.getElementById('results').value = results.replace(/\s*$/, '');
+			return true;
+		}
+
+		function clearForm() {
+			document.getElementById('kw1').innerHTML = '';
+			document.getElementById('kw2').innerHTML = '';
+			document.getElementById('kw3').innerHTML = '';
+			document.getElementById('results').innerHTML = '';
+			return true;
+		}
+	</script>
+</head>
+<body>
+	<div class="dh-navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-3"><a href="https://dhununk.com/">
+                    <img src="../img/Logo Dhununk.png" alt=""></a>
+                </div>
+                <div class="col-9">
+                    <ul class="dh-hormenu">
+                        <li>
+                            <a href="tentang/">Tentang</a>
+                        </li>
+                        <li><a href="blog/">blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div id="container" class="container">
+		<div class="row dh-site-tittle">
+            <div class="col-12 col-md-4">
+                <div class="title-page">
+                    <h1>Keyword Builder</h1>
+                </div>
+            </div>
+            <div class="col-12 col-md-8">
+                <script type="text/javascript">
+					var arldgzn_id = 4;
+					var arldgzn_now = new Date()
+					var detik = arldgzn_now.getSeconds()
+					var arldgzn_place = detik % arldgzn_id;
+					arldgzn_place += 1;
+					if (arldgzn_place == 1) {
+					  url = "https://mauorder.online/klosing-lagi";
+					  alt = "Obat Penumbuh Rambut Botak Paling Ampuh Dan Mujarab";
+					  title = "Obat Penumbuh Rambut Botak";
+					  banner = "../img/ads/1.png";
+					  width = "100%";
+					  height = "auto";
+					}
+					if (arldgzn_place == 2) {
+					  url = "https://mauorder.online/klosing-lagi";
+					  alt = "Penumbuh Bulu Terbukti";
+					  title = "Penumbuh Bulu Terbukti";
+					  banner = "../img/ads/2.png";
+					  width = "100%";
+					  height = "auto";
+					}
+					if (arldgzn_place == 3) {
+					  url = "https://mauorder.online/klosing-lagi";
+					  alt = "Perontok Bulu";
+					  title = "Perontok Bulu";
+					  banner = "../img/ads/3.png";
+					  width = "100%";
+					  height = "auto";
+					} if (arldgzn_place == 4) {
+					  url = "https://mauorder.online/klosing-lagi";
+					  alt = "Perontok Bulu";
+					  title = "Perontok Bulu";
+					  banner = "../img/ads/4.png";
+					  width = "100%";
+					  height = "auto";
+					}
+					
+					
+					
+					document.write('<a href=\"' + url + '\" target=\"_blank\" rel=\"nofollow\">');
+					document.write('<img src=\"' + banner + '\" width=')
+					document.write(width + ' height=' + height + ' ');
+					document.write('title=\"' + title + '\" alt=\"' + alt + '\"></a>');
+				</script>
+            </div>
+        </div>
+	<div class="row">
+		<div class="kwlist col-12 col-md-3">
+			<label>Keyword List 1</label><br>
+			<textarea id="kw1" placeholder="Satu baris satu kata kunci" class="dh-box-max-tiga"></textarea>
+		</div>
+		<div class="kwlist col-12 col-md-3">
+			<label>Keyword List 2</label><br>
+			<textarea id="kw2" placeholder="Satu baris satu kata kunci" class="dh-box-max-tiga"></textarea>
+		</div>
+		<div class="kwlist col-12 col-md-3">
+			<label>Keyword List 3</label><br>
+			<textarea id="kw3" placeholder="Satu baris satu kata kunci" class="dh-box-max-tiga"></textarea>
+		</div>
+		<div id="buttons" class="col-12 col-md-3">
+			<label>Hasil</label><br>
+			<div class="dh-box-max-tiga dh-wrapper-ending">
+				<textarea id="results" wrap="off" class="dh-textarea-max"></textarea>
+			</div>
+			
+		</div>
+		
+	</div>
+	<div class="row">
+		<div class="col-3"></div>
+		<div class="col-3"></div>
+		<div class="col-3">
+			<select id="matchtype" class="dh-opt">
+				<option value="">Broad Match: no quotation marks around results</option>
+				<option value="quotes">Phrase Match: "quotation marks" around results</option>
+				<option value="square">Exact Match: [square brackets] around results</option>
+			</select>
+		</div>
+		<div class="col-3">
+			<input id="generate" type="button" onclick="generate();" value="Generate" class="tombol">
+		</div>
+	</div>
+	<hr class="dh-garis">
+	<div class="row">
+		<div class="col-12 col-md-8">
+			<div class="dh-article-box">
+				<h4>Tentang</h4>
+				<p>Keyword Builder - Merupakan sebuah alat untuk membuat atau merangkai sebuah keyword menjadi kalimat menjadi lebih bervariasi dan ramah SEO.</p>
+				<p>Sangat cocok digunakan untuk membuat judul artikel, judul produk di e-commerce dan kebutuhan tools <a href="../spinnersakti/index.html">Spinner Sakti</a>.</p>
+				<h4>Cara penggunaan</h4>
+				<p>Input semua keyword yang akan Anda rangkai menjadi kalimat.</p>
+				<p>Contoh:</p>
+				<div class="row">
+					<div class="col-12 col-md-4">
+						<div class="dh-box-preview">
+							<h6>Keyword List 1</h6>
+							<ul>
+								<li>Obat</li>
+								<li>Vitamin</li>
+								<li>Produk</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<div class="dh-box-preview">
+							<h6>Keyword List 2</h6>
+							<ul>
+								<li>Penumbuh Rambut</li>
+								<li>Pemanjang Rambut</li>
+								<li>Merawat Rambut</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-md-4">
+						<div class="dh-box-preview">
+							<h6>Keyword List 3</h6>
+							<ul>
+								<li>Botak</li>
+								<li>Rontok</li>
+								<li>Bercabang</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<h6>Hasil</h6>
+				<ul>
+					<li>Obat Penumbuh Rambut Rontok</li>
+					<li>Obat Penumbuh Rambut Bercabang</li>
+					<li>Vitamin Penumbuh Rambut Botak</li>
+					<li>Vitamin Penumbuh Rambut Bercabang</li>
+					<li>Produk Penumbuh Rambut Botak</li>
+					<li>Produk Penumbuh Rambut Rontok</li>
+					<li>Produk Penumbuh Rambut Bercabang</li>
+				</ul>
+				<span class="dh-recommendation">Dan masih ada 18 rekomendasi judul lainnya</span><br>
+				<a href="#" class="dh-article-button">Coba sekarang</a>
+			</div>
+		</div>
+		<div class="col-12 col-md-4">
+			<div class="dh-article-box dh-sidebar">
+				<h4>Tools lainnya</h4>
+				<div class="dh-other-tools">
+					<a href="../spinnersakti/index.html">Spinner Sakti</a>
+				</div>
+				<div class="dh-other-tools">
+					<a href="../spintaxmaker/index.html">Spintax Maker</a>
+				</div>
+				<div class="dh-other-tools">
+					<a href="../articledesigner/index.html">Article Designer</a>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	<hr class="dh-garis">
+	<div class="dh-credit">
+		&copy; <a href="https://dhununk.com/">Dhununk</a> 2020
+	</div>
+</div>
+<script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./Keyword Permutation Builder_files/ga.js.download" type="text/javascript"></script> 
+<script type="text/javascript"> 
+try {
+var pageTracker = _gat._getTracker("UA-257472-16");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+
+
+</body></html>
