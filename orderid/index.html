@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order ID</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js"></script>
+    <style>
+        body {
+            background-color: #ffbe0f;
+        }
+        .container-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 300px;
+        }
+        #demo {
+            font-size: 40px;
+            text-align: center;
+            font-family: 'Rubik', sans-serif;
+            letter-spacing: 8px;
+            background-color: #fff3;
+            padding: 20px 0;
+            border-radius: 20px;
+            height: 50px;
+            border: 0;
+            resize: none;
+        } #demo:focus {
+            outline: none;
+        }
+        .title {
+            font-family: 'Barlow', sans-serif;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+        .unch {
+            padding: 10px 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+            background-color: #4c5df3;
+            color: #fff;
+            border: 0;
+            border-radius: 40px 0 0 40px;
+            cursor: pointer;
+            margin-right: -4    px;
+        } .unch:focus {
+            outline: 0;
+        } .unch:hover {
+            opacity: 80%;
+        }
+        .unchs {
+            padding: 10px 20px;
+            font-size: 18px;
+            text-transform: uppercase;
+            background-color: #f34c4c;
+            color: #fff;
+            border: 0;
+            border-radius: 0 40px 40px 0;
+            cursor: pointer;
+        } .unchs:focus {
+            outline: 0;
+        } .unchs:hover {
+            opacity: 80%;
+        }
+        .tombol {
+            text-align: right;
+        }
+    </style>
+</head>
+<body onload="myFunction()">
+    
+    <div class="container-content">
+        <p class="title">Order ID</p>
+        <textarea id="demo">1615457443362</textarea>
+        <div class="tombol">
+            <button onclick="myFunction()" class="unch">Generate</button>
+            <button data-clipboard-target="#demo" class="unchs" data-clipboard-action="copy">Copy</button>
+        </div>
+    </div>
+
+
+    
+    <script>
+    function myFunction() {
+      var d = new Date();
+      var n = d.getTime();
+      document.getElementById("demo").innerHTML = n;
+    }
+
+    new ClipboardJS('.unchs');
+    </script>
+
+</body>
+</html>
