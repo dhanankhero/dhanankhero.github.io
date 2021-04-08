@@ -49,6 +49,8 @@ a {color: inherit;text-decoration: none;}
 .dh-box-max {padding: 10px;width: 100%;height: 450px;resize: none;background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border: 0;border-radius: 10px;}
 .dh-box-max-dua {padding: 10px;width: 100%;height: 350px;resize: none;background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border: 0;border-radius: 10px;margin: 15px 0 0;}
 .dh-box-max-tiga {padding: 10px;width: 100%;height: 350px;resize: none;background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border: 0;border-radius: 10px;margin: 15px 0 5px;}
+.dh-box-max-orderid {padding: 10px;width: 100%;height: 150px;resize: none;background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border: 0;border-radius: 10px;margin: 15px 0 5px;font-size: 105px;text-align: center;font-family: 'Rubik', sans-serif;}
+.dh-box-max-min {padding: 10px;width: 100%;height: 35px;resize: none;background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border: 0;border-radius: 10px;margin: 15px 0 5px;}
 .dh-wrapper-ending {padding: 0;overflow: hidden;}
 .dh-textarea-max {width: calc(100% - 20px);height: calc(100% - 20px);background-color: #0000;border: 0;margin: 10px;resize: none;}
 .metode {height: 30px;margin: 10px 0;}
@@ -57,6 +59,7 @@ a {color: inherit;text-decoration: none;}
 
 .kunch {height: 350px !important;}
 .tombol {font-size: 13px;padding: 10px 0;border: 0;background-color: #51676f;margin-top: 15px;width: 100%;border-radius: 10px;color: #fff;cursor: pointer;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;letter-spacing: 1px;}
+.tombol-red {font-size: 13px;padding: 10px 0;border: 0;background-color: #7a3b3b;margin-top: 15px;width: 100%;border-radius: 10px;color: #fff;cursor: pointer;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;letter-spacing: 1px;}
 .copy {background-color: #fff0;color: #555;box-shadow: none;}
 .dh-opsi {text-align: right;}
 
@@ -88,3 +91,13 @@ a {color: inherit;text-decoration: none;}
 .dh-box-preview li {padding: 4px;font-size: 13px;color: #777;}
 .dh-box-preview p {padding: 5px 15px 15px;}
 
+.label-input {
+  position: relative;
+  padding: 7px 0;
+} .rkanan {
+  text-align: right;
+}
+
+.dh-link {
+  color: #e78300
+}

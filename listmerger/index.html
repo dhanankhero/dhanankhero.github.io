@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Order ID - Dhununk</title>
+    <title>List & Merger - Dhununk</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../img/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -11,12 +11,9 @@
     <link rel="stylesheet" href="../bootstrap-grid.min.css">
     <link rel="stylesheet" href="../style.css">
     <script src="jquery.js"></script>
-    <script type="text/javascript" src="ga.js"></script>
-    <script type="text/javascript" src="jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js"></script>
-    <script type="text/javascript" src="random-line-picker.js"></script>
+    <script type="text/javascript" src="merge-text.js"></script>
 </head>
-<body onload="myFunction()">
+<body>
     <div class="dh-navbar">
         <div class="container">
             <div class="row">
@@ -40,7 +37,7 @@
         <div class="row dh-site-tittle">
             <div class="col-12 col-md-4">
                 <div class="title-page">
-                    <h1>Order ID</h1>
+                    <h1>List & Merger</h1>
                 </div>
             </div>
             <div class="col-12 col-md-8">
@@ -92,41 +89,77 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-4">
+			    <label>Kata awal</label><br>
+                <input type="text" id="prefix" value="" class="dh-box-max-min">
+            </div>
+            <div class="col-4">
+			    <label>Pemisah</label><br>
+                <input type="text" id="delimiter" value="" class="dh-box-max-min">
+            </div>
+            <div class="col-4">
+			    <label>Akhiran</label><br>
+                <input type="text" id="suffix" value="" class="dh-box-max-min">
+            </div>
             <div class="col-12">
-                <textarea class="dh-box-max-orderid" id="demo" readonly></textarea>
+                <p class="">Kamu dapat menyisipkan perintah <a href="javascript: void(0)" id="link_add_count" class="dh-link">%count%</a> dan <a href="javascript: void(0)" id="link_add_length" class="dh-link">%length%</a> untuk menambahkan variabel memasukkan jumlah garis yang diproduksi dan nilai panjangnya masing-masing.</p>
+                <hr class="dh-garis">
             </div>
-            <div class="col-4"></div>
-            <div class="col-2">
-                <input type="button" value="Generate" onclick="myFunction()" class="tombol-red">
+            <div class="col-6">
+                <label>Kata Pertama</label><br>
+                <textarea class="dh-box-max-tiga" id="source1" onkeyup="" placeholder="Tulis disini"></textarea>
             </div>
-            <div class="col-2">
-                <input type="button" value="Salin" data-clipboard-target="#demo" class="tombol unchs" data-clipboard-action="copy">
+            <div class="col-6">
+                <label>Kata Kedua</label><br>
+                <textarea class="dh-box-max-tiga" id="source2" onkeyup="" placeholder="Tulis disini"></textarea>
             </div>
-            <div class="col-4"></div>
+            <div class="col-12">
+                <hr class="dh-garis">
+                <label>Merged text</label><br>
+                <textarea class="dh-box-max-tiga" id="result" onkeyup="" placeholder="Tulis disini" readonly></textarea>
+            </div>
         </div>
         <hr class="dh-garis">
         <div class="row">
             <div class="col-12 col-md-8">
                 <div class="dh-article-box">
                     <h4>Tentang</h4>
-                    <p>Order ID - Dibuat khusus untuk kepentingan input order id pada data order kantor Biliva dan Sukses Jaya Abadi. Dapat juga digunakan sebagai pembuatan ID unik dalam pembuatan data pada database untuk kepentingan sortir (pengurutan)</p>
+                    <p>List & Merger - Merupakan sebuah Fasilitas untuk membuat Artikel <strong title="What You See Is What You Get">WYSIWYG</strong> Gratis dengan Fitur yang lengkap di dalamnya. Tools ini hampir sama dengan "Classic Editor Plugin" yang ada pada Wordpress.</p>
+                    <p>Sangat cocok untuk kamu yang ingin membuat artikel pada website Statis (HTML CSS), Tools <a href="../spinnersakti/index.html">Spinner Sakti</a> dan Sebagainya.</p>
                     <h4>Cara penggunaan</h4>
-                    <p>Klik Generate lalu klik salin, Order ID sudah di Salin dan siap di Paste (ctrl + V)</p>
+                    <p>Cara penggunaan nya hampir sama seperti Classic Editor Wordpress</p>
+                    <h6>Note</h6>
+                    <p>Untuk mendapatkan Format HTML, silahkan klik menu Tools > Source Code</p>
+                    <a href="#" class="dh-article-button">Coba sekarang</a>
                 </div>
             </div>
             <div class="col-12 col-md-4">
                 <div class="dh-article-box dh-sidebar">
                     <h4>Tools lainnya</h4>
                     <div class="dh-other-tools">
+                        <a href="../articledesigner/index.html">Article Editor</a>
+                    </div>
+                    <div class="dh-other-tools">
+                        <a href="../changecase/index.html">Change Case</a>
+                    </div>
+                    <div class="dh-other-tools">
                         <a href="../keywordbuilder/index.html">Keyword Builder</a>
                     </div>
                     <div class="dh-other-tools">
-                        <a href="../spintaxmaker/index.html">Spintax Maker</a>
+                        <a href="../orderid/index.html">Order ID</a>
+                    </div>
+                    <div class="dh-other-tools">
+                        <a href="../randomline/index.html">Random Line</a>
+                    </div>
+                    <div class="dh-other-tools">
+                        <a href="../sortline/index.html">Sortline</a>
                     </div>
                     <div class="dh-other-tools">
                         <a href="../spinnersakti/index.html">Spinner Sakti</a>
                     </div>
-                    
+                    <div class="dh-other-tools">
+                        <a href="../spintaxmaker/index.html">Spintax Maker</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -135,14 +168,5 @@
             &copy; <a href="https://dhanankhero.github.io/">Dhununk</a> 2021
         </div>
     </div>
-    <script>
-        function myFunction() {
-          var d = new Date();
-          var n = d.getTime();
-          document.getElementById("demo").innerHTML = n;
-        }
-    
-        new ClipboardJS('.unchs');
-    </script>
 </body>
 </html>
