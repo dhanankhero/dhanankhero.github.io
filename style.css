@@ -36,12 +36,16 @@ a {color: inherit;text-decoration: none;}
 .dh-tool-head {padding: 10px;text-align: center;margin: 45px 0 85px}
 .dh-tool-head h1 {text-transform: uppercase;font-weight: 500;letter-spacing: 5px;}
 
-.dh-content-wrapper {padding: 10px;margin: 15px 0;border-radius: 15px;background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;}
+.dh-content-wrapper {padding: 10px;margin: 15px 0;border-radius: 30px;background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;}
 .dh-content-wrapper img {width: 100%;border-radius: 10px;}
 .dh-content-wrapper h3 {margin: 20px 0 10px;font-size: 32px;font-family: 'Rubik', sans-serif;font-weight: 500;text-transform: uppercase;letter-spacing: 1px;}
 .dh-content-wrapper p {margin: 10px 0;font-size: 14px;color: #aaa;font-weight: 300;}
 .dh-content-wrapper .dh-button {margin: 8px 0;font-size: 12px;background-color: #fcfcfc;border: 1px solid #eee;border-radius: 5px;box-shadow: 0 5px 10px #00000007,0 -2px 2px #00000010 inset;padding: 10px 20px;cursor: pointer;letter-spacing: 1px;font-weight: 600;}
 .dh-content-wrapper .dh-button:hover {background-color: #fff;}
+
+/* .dh-content-wrapper:hover {border:1px solid #f5a31a;} */
+.dh-content-wrapper:hover h3 {color: #f5a31a}
+.dh-content-wrapper:hover .dh-button {background-color: #f5a31a;color: #fff}
 
 .dh-garis {border: 0;border-top: 1px solid #e9e9e9;margin: 40px 0;}
 .dh-credit {padding: 0 0 30px;text-align: center;}
@@ -74,6 +78,7 @@ a {color: inherit;text-decoration: none;}
 
 .dh-hormenu {list-style: none;margin: 0;text-align: right;}
 .dh-hormenu li {display: inline-block;margin: 0;padding: 11px 15px;}
+.dh-hormenu li:hover {color: #f5a31a;}
 
 .dh-other-tools a {background-color: #f8f8f8;box-shadow: 1px 1px 2px #0001,-1px -1px 1px #fff;border: 0;border-radius: 10px;padding: 15px 30px;display: inline-block;margin-top: 15px;text-decoration: none !important;}
 
