@@ -106,3 +106,59 @@ a {color: inherit;text-decoration: none;}
 .dh-link {
   color: #e78300
 }
+
+
+/* theme baru */
+
+.dh-logo-container {
+  padding: 35px;
+  padding-bottom: 10px;
+  margin: 15px 0 0;
+}
+
+.dh-logo-container img {
+  width: 100%;
+  border-radius: 25px;
+}
+.keywordbuilder-logo {
+  padding-bottom: calc(100% - 70px);
+  height: 0px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.keywordbuilder-logo img {
+  object-fit: cover;
+  width: calc(100% - 100px);
+  height: calc(100% - 105.5px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(calc(-50% - 3px)) translateX(-50%);
+}
+
+.dh-label-app {
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+  transition: color ease .1s;
+  padding-bottom: 25px;
+}
+.dh-app-container:hover {
+  background-color: rgba(0, 0, 0, 0.034);
+  border-radius: 20px;
+}
+.dh-app-container:hover .dh-label-app {
+  color: #b66700;
+}
+.dh-app-container {
+  background-color: #fff0;
+  border-radius: 20px;
+  transition: background-color ease .1s;
+}
+.dh-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 35px;
+  line-height: 75px;
+}

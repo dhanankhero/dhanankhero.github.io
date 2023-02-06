@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Article Designer - Dhununk</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../img/favicon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../bootstrap-grid.min.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="dh-navbar">
+        <div class="container">
+            <div class="row">
+                <div class="col-3"><a href="https://dhanankhero.github.io/">
+                    <img src="../img/Logo Dhununk.png" alt=""></a>
+                </div>
+                <div class="col-9">
+                    <ul class="dh-hormenu">
+                        <li>
+                            <a href="tentang/">Tentang</a>
+                        </li>
+                        <li><a href="blog/">blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row dh-site-tittle">
+            <div class="col-12 col-md-12">
+                <div class="title-page">
+                    <h1>Analisa Kata</h1>
+                    <p>Digunakan untuk menganalisa berapa kali kata dalam sebuah kalimat muncul.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-8">
+                
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <input type="hidden" id="commonWords" name="commonWords" value="no">
+                <div class="row">
+                    <div class="col-9">
+                        <textarea id="oldText" name="oldText" class="dh-textarea" style="height: 550px;"></textarea>
+                    </div>
+                    <div class="col-3">
+                        <div class="analitik">
+                            <div id="newText2">
+                                <h3>Hasil analisa</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="button" id="tf-submit" name="count-words" value="Count Words" class="subbtn">
+                <input type="button" id="tf-reset" name="clear-words" value="Reset" class="rstbtn">
+            </div>
+        </div>
+        </script><script async="" type="text/javascript" src="wordcounter.js"></script>
+        <hr class="dh-garis">
+        <div class="dh-credit">
+            &copy; <a href="https://dhanankhero.github.io/">Dhununk</a> 2021
+        </div>
+    </div>
+</body>
+</html>
